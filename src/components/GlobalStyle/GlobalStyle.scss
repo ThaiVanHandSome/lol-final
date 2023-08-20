@@ -1,0 +1,92 @@
+@import 'normalize.css';
+
+:root {
+    --primary: #fe2c55;
+    --black: #000;
+    --white: #fff;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Beaufort', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+}
+
+@font-face {
+    font-family: Beaufort;
+    src: url(/asset/fonts/BeaufortforLOL-Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Beaufort;
+    src: url(/asset/fonts/BeaufortforLOL-Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: BeaufortItalic;
+    src: url(/asset/fonts/BeaufortforLOL-BoldItalic.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: BeaufortItalic;
+    src: url(/asset/fonts/BeaufortforLOL-HeavyItalic.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: NeueFrutigerWorld;
+    src: url(/asset/fonts/NeueFrutigerWorld-Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: NeueFrutigerWorld;
+    src: url(/asset/fonts/NeueFrutigerWorld-Medium.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Spiegel;
+    src: url(/asset/fonts/Spiegel-Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Spiegel;
+    src: url(/asset/fonts/Spiegel-Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Spiegel;
+    src: url(/asset/fonts/Spiegel-SemiBold.woff);
+    font-weight: 600;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+}
