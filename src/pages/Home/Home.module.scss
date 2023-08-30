@@ -1,0 +1,91 @@
+.slider {
+    width: 100%;
+    position: relative;
+    min-height: 620px;
+    padding: 60px;
+}
+
+.foreground-wrapper {
+    display: block;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    height: 55vh;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+.foreground-wrapper-video {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(7, 18, 26);
+    object-fit: cover;
+}
+
+.background-wrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(7, 18, 26);
+    overflow: hidden;
+}
+
+.background-wrapper-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    animation: 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s 1 normal forwards running running-overlay;
+}
+
+.background-wrapper-overlay-image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+@keyframes running-overlay {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.background-wrapper-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(2);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    top: -150px;
+    width: 100%;
+    height: 1000px;
+    background-color: var(--white);
+}

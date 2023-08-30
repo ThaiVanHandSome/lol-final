@@ -1,0 +1,239 @@
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 62vh;
+    background-color: var(--white);
+    padding: 0 36px;
+    z-index: 10000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.riot-logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        fill: red !important;
+    }
+}
+
+.riot-logo {
+    flex-shrink: 0;
+    margin-right: 2px;
+}
+
+.riot-logo-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #7e7e7e;
+    transform: rotate(180deg);
+}
+
+.riot-logo-container:hover .riot-logo-arrow {
+    fill: red;
+}
+
+.btn-close {
+    cursor: pointer;
+}
+
+// Content
+.content {
+    width: 100%;
+    display: flex;
+}
+
+.list-item-container {
+    width: 50%;
+    display: flex;
+}
+
+.list-items {
+    width: 33.3333%;
+    margin: 0 6px;
+}
+
+.list-item-block {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.title {
+    background: rgba(186, 186, 186, 0.1);
+    border-radius: 6.4px;
+    width: 100%;
+    height: 32px;
+    margin: 0px;
+    padding: 8px 12px 8px 16px;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: bold;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0a0a0a;
+}
+
+.list {
+    margin-top: 4px;
+}
+
+.list-item {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+    line-height: 120%;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(74, 74, 74);
+        background-color: rgba(186, 186, 186, 0.3);
+        border-radius: 6.4px;
+    }
+}
+
+.container-right {
+    width: 50%;
+    min-height: 320px;
+    height: auto;
+}
+
+.preview {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+}
+
+.preview-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.preview-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+    clip-path: polygon(77% 0, 63% 90%, 100% 100%, 100% 101%, 0% 101%, 0% 0%);
+    background-image: radial-gradient(160.43% 179.54% at 100.43% 100%, rgb(80, 104, 125) 0%, rgb(10, 10, 10) 70%);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.preview-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 76%;
+    padding: 13% 8% 7.5% 0%;
+    height: 100%;
+}
+
+.logo-container {
+    flex-grow: 7;
+    width: 100%;
+    max-width: 65%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+}
+
+.logo-text {
+    width: 100%;
+    font-size: calc(120.5% + 0.8vw);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    line-height: 90%;
+    font-weight: 600;
+}
+
+.preview-content {
+    flex-grow: 1;
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: flex-end;
+    max-width: 80%;
+    color: #c7c7c7;
+    font-size: 1.3rem;
+}
+
+.platforms {
+    fill: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+    padding: 4px 8px;
+    width: auto;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 16px;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.platforms-icon {
+    padding: 0 4px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-content-right {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.default-block {
+    width: 50%;
+    margin: 0 12px;
+}
+
+.default-background {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.default-content {
+    position: static;
+    color: #0a0a0a;
+    margin: 12px 0 0 0;
+    letter-spacing: 0.03em;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.56rem;
+    text-align: left;
+}

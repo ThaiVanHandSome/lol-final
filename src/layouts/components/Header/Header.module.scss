@@ -1,0 +1,163 @@
+.wrapper {
+    width: 100%;
+    height: var(--header-height);
+    background-color: #111;
+    border-bottom: 2px solid rgba(51, 51, 51, 0.25);
+    padding: 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Left content
+.riotbar-left-content {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 120%;
+    white-space: nowrap;
+}
+
+.riot-logo-container {
+    display: flex;
+    align-items: center;
+    fill: var(--white);
+    cursor: pointer;
+
+    &:hover,
+    &:hover.riot-logo-arrow {
+        fill: red !important;
+    }
+}
+
+.riot-logo {
+    flex-shrink: 0;
+    margin-right: 2px;
+}
+
+.lol-logo {
+    margin-left: 22px;
+}
+
+.list-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    list-style: none;
+}
+
+.nav-item,
+.nav-item-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    padding: 7.5px 16px;
+    text-align: center;
+    margin-right: 4px;
+    cursor: pointer;
+
+    span {
+        color: #f9f9f9;
+        margin-right: 2px;
+    }
+
+    &::after {
+        content: '';
+        display: none;
+        background-color: rgb(0, 160, 186);
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 2px;
+    }
+
+    &:hover {
+        background: rgba(128, 128, 128, 0.3);
+        border-radius: 6.4px;
+    }
+
+    &:hover::after {
+        display: block;
+    }
+}
+
+.nav-item-local-link {
+    color: #f9f9f9 !important;
+}
+
+.nav-item-link {
+    span {
+        color: #f9f9f9;
+        margin-right: 2px;
+    }
+}
+
+// Right content
+.riotbar-right-content {
+    display: flex;
+    align-items: center;
+}
+
+.search-container,
+.select-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-container {
+    width: 44px;
+    height: 44px;
+    background-color: #2b2a29;
+    transition: background-color 0.1s ease-in-out;
+    border-radius: 50%;
+    padding: 10px 0;
+    fill: #f9f9f9;
+}
+
+.select-language {
+    fill: #f9f9f9;
+    margin-left: 6px;
+}
+
+.btn-sign-in,
+.btn-playing {
+    padding: 0 6px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    letter-spacing: 0.08em;
+    line-height: 120%;
+    height: 32px;
+    margin-left: 8px;
+    font-family: 'NeueFrutigerWorld', sans-serif;
+    cursor: pointer;
+}
+
+.btn-sign-in {
+    color: #f9f9f9 !important;
+    border-radius: 6.4px;
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.btn-playing {
+    border-radius: 12px;
+    line-height: 1.6rem;
+    background: rgb(11, 196, 226);
+    color: #111;
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98);
+
+    &:hover {
+        background-color: rgb(0, 178, 207);
+    }
+}
