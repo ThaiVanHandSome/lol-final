@@ -17,11 +17,13 @@ function Header() {
     const [open, setOpen] = useState(false);
     return (
         <div className={cx('wrapper')}>
-            {open && (
-                <div className={cx('riot-game-container')}>
-                    <RiotGameContainer setOpen={setOpen} />
-                </div>
-            )}
+            <div
+                className={cx('riot-game-container', {
+                    open,
+                })}
+            >
+                {open && <RiotGameContainer setOpen={setOpen} />}
+            </div>
             <div className={cx('riotbar-left-content')}>
                 <div className={cx('riot-logo-container')} onClick={() => setOpen(true)}>
                     <div className={cx('riot-logo')}>

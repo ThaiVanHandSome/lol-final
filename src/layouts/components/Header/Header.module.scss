@@ -9,6 +9,31 @@
     justify-content: space-between;
 }
 
+.riot-game-container {
+    position: absolute;
+    min-height: 62vh;
+    top: -100%;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    // animation: riotGameContainerAppear linear 0.5s;
+    // clip-path: polygon(50% 0%, 100% 0, 99% 69%, 49% 100%, 50% 100%, 0 69%, 0 0);
+
+    &.open {
+        top: 0;
+    }
+}
+
+@keyframes riotGameContainerAppear {
+    0% {
+        clip-path: polygon(50% 0%, 100% 0, 99% 69%, 49% 100%, 50% 100%, 0 69%, 0 0);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
 // Left content
 .riotbar-left-content {
     display: flex;

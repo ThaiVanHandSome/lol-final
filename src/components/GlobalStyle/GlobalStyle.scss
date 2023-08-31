@@ -92,3 +92,9 @@ a[href] {
     color: var(--text-color);
     text-decoration: none;
 }
+
+canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    // transform: scale(0.2);
+}
