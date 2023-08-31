@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import { POLYGON_FIVE_POINTS } from './Polygon';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -87,7 +88,7 @@ function Home() {
                 </div>
             </div>
             <div className={cx('container')}>
-                <div className={cx('block-container')}></div>
+                <Button primary>CHƠI MIỄN PHÍ</Button>
             </div>
         </div>
     );

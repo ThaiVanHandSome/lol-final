@@ -1,0 +1,33 @@
+.wrapper {
+    display: block;
+    padding: 10px 20px;
+    min-width: 220px;
+    letter-spacing: 0.3px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    border: 0px;
+    animation: 1000ms cubic-bezier(0.165, 0.84, 0.44, 1) 520ms 1 normal forwards running transitionHover;
+    cursor: pointer;
+}
+
+.primary {
+    transition: clip-path 2s ease-in-out, transform 0.3s ease-in-out;
+    clip-path: polygon(6% 0%, 100% 0%, 100% 76%, 94% 100%, 0% 100%, 0% 24%);
+    transform: translateZ(0);
+}
+
+.primary:hover {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@keyframes transitionHover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

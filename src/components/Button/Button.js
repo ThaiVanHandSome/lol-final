@@ -6,9 +6,10 @@ import styles from './Button.module.scss';
 const cx = classNames.bind(styles);
 
 function Button({
+    children,
     textColor = '#fff',
     borderColor = '#fff',
-    backgroundColor = 'rgb(11, 198, 227);',
+    backgroundColor = '#0BC6E3',
     primary,
     outline,
     haveOutline,
@@ -32,7 +33,25 @@ function Button({
         Comp = 'a';
         props.href = href;
     }
-    return <div className={cx('wrapper')} {...props}></div>;
+    const styles = {
+        color: textColor,
+        backgroundColor: backgroundColor,
+    };
+
+    const classes = cx('wrapper', {
+        primary,
+        outline,
+        haveOutline,
+        small,
+        medium,
+        large,
+        disable,
+    });
+    return (
+        <Comp className={classes} {...props} style={styles}>
+            {children}
+        </Comp>
+    );
 }
 
 export default Button;
