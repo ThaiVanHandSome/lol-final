@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
-import { POLYGON_FIVE_POINTS } from './Polygon';
+import { POLYGON_FIVE_POINTS } from '~/components/Polygon';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
@@ -39,7 +39,7 @@ function Home() {
 
     useEffect(() => {
         ReactDOM.render(
-            <POLYGON_FIVE_POINTS width={borderRef.current.width} height={borderRef.current.height} />,
+            <POLYGON_FIVE_POINTS width={borderRef.current.clientWidth} height={borderRef.current.clientHeight} />,
             borderRef.current,
         );
     }, []);
@@ -88,7 +88,9 @@ function Home() {
                 </div>
             </div>
             <div className={cx('container')}>
-                <Button primary>CHƠI MIỄN PHÍ</Button>
+                <Button haveOutline borderColor="#BFBDBF">
+                    CHƠI MIỄN PHÍ
+                </Button>
             </div>
         </div>
     );
